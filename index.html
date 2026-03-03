@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mum Dükkanı - Ana Sayfa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="products.html">Ürünler</a>
+        <a href="contact.html">İletişim</a>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <a href="index.html" class="logo">MumDükkanı</a>
+        </div>
+
+
+
+        <div class="nav-icons">
+
+            <form class="search-box" action="products.html" method="GET">
+                <input type="text" name="q" placeholder="Ara..." required>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+
+            <div class="cart-wrap" onclick="openCart()">
+                <i class="fa-solid fa-shopping-bag"></i>
+                <span id="sepet-sayaci" class="cart-badge">0</span>
+            </div>
+
+
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>El Yapımı Doğal Mumlar</h1>
+            <p>Evinize sıcaklık ve huzur getiren kokular.</p>
+
+            <a href="products.html" class="btn">Koleksiyonu Keşfet</a>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2 style="text-align: center; margin-bottom: 10px;">Popüler Mumlar</h2>
+        <p style="text-align: center; color: #777; margin-bottom: 40px;">Işığıyla huzur, kokusuyla büyüleyen favori
+            seçimler.</p>
+
+        <div class="product-list">
+            <div class="product">
+                <img src="assets/images/mum4.jpg" alt="Espresso Dark">
+                <h3>Espresso Dark</h3>
+                <p>210 ₺</p>
+                <button class="btn btn-detail" data-title="Espresso Dark" data-price="210 ₺"
+                    data-img="assets/images/mum4.jpg"
+                    data-desc="Taze çekilmiş kahve çekirdeklerinin yoğun kokusu.">İncele</button>
+            </div>
+            <div class="product">
+                <img src="assets/images/mum7.jpg" alt="Pumpkin Spice">
+                <h3>Pumpkin Spice</h3>
+                <p>250 ₺</p>
+                <button class="btn btn-detail" data-title="Pumpkin Spice" data-price="250 ₺"
+                    data-img="assets/images/mum7.jpg" data-desc="Balkabağı ve baharat şöleni.">İncele</button>
+            </div>
+            <div class="product">
+                <img src="assets/images/mum6.jpg" alt="The Dance Of Berries">
+                <h3>The Dance Of Berries</h3>
+                <p>250 ₺</p>
+                <button class="btn btn-detail" data-title="The Dance Of Berries" data-price="250 ₺"
+                    data-img="assets/images/mum6.jpg" data-desc="Orman meyvelerinin tatlı dansı.">İncele</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="text-align: center; padding: 50px 20px; background-color: #fff;">
+        <h2 style="margin-bottom: 40px;">Neden MumDükkanı?</h2>
+        <div class="feature-list">
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fa-solid fa-leaf"></i></div>
+                <h3>%100 Doğal Soya</h3>
+            </div>
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <h3>El Yapımı Üretim</h3>
+            </div>
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fa-solid fa-wind"></i></div>
+                <h3>Uzun Süreli Koku</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 MumDükkanı – Tüm Hakları Saklıdır</p>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Ürün Resmi">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <p id="modalPrice" style="font-size:1.5rem; color:#C08A7D; font-weight:bold;"></p>
+                    <button class="btn" onclick="addToCart()">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCart()">&times;</span>
+            <h2>Sepetim</h2>
+            <hr>
+            <div id="cartItemsContainer"></div>
+            <hr>
+            <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:1.2rem;">
+                <span>Toplam:</span> <span id="cartTotal">0 ₺</span>
+            </div>
+            <button class="btn-checkout" onclick="goToCheckout()">Sepeti Onayla</button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünlerimiz - MumDükkanı</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+     <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="products.html">Ürünler</a>
+        <a href="contact.html">İletişim</a>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <a href="index.html" class="logo">MumDükkanı</a>
+        </div>
+        <div class="nav-icons">
+            <form class="search-box" action="products.html" method="GET">
+                <input type="text" name="q" placeholder="Ara..." required autocomplete="off">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+
+            <div class="cart-wrap" onclick="openCart()">
+                <i class="fa-solid fa-shopping-bag"></i>
+                <span id="sepet-sayaci" class="cart-badge">0</span>
+            </div>
+
+    </header>
+
+
+    <section class="content">
+        <h1>Doğal Mum Koleksiyonu</h1>
+        <p>Evinize huzur veren kokular.</p>
+
+        <div class="product-list">
+
+            <div class="product"
+                data-keywords="Lavanta lavender mum candle sakinleştirici uyku mor aromaterapi stres sedative sleep purple aromatherapy fresh taze ">
+                <img src="assets/images/mum1.jpg" alt="Lavanta Mum">
+                <h3>Lavanta Bahçesi</h3>
+                <p>200 ₺</p>
+                <button class="btn-detail" data-title="Lavanta Bahçesi" data-price="200 ₺"
+                    data-img="assets/images/mum1.jpg"
+                    data-desc="Gerçek lavanta yağlarıyla hazırlanan bu mum, stresli günlerin ardından rahatlamanız için birebir. %100 Soya mumu.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product" data-keywords="vanilya vanilla beyaz mum candle white kış winter sweety tatlı">
+                <img src="assets/images/mum2.jpg" alt="Vanilya Mum">
+                <h3>Vanilya Rüyası</h3>
+                <p>200 ₺</p>
+                <button class="btn-detail" data-title="Vanilya Rüyası" data-price="200 ₺"
+                    data-img="assets/images/mum2.jpg"
+                    data-desc="Madagaskar vanilyasının tatlı ve sıcak notaları evinizi saracak.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="tarçın portakal orange mum candle winter cinnamon turuncu narenciye citrus kış ">
+                <img src="assets/images/mum3.jpg" alt="Tarçın Mum">
+                <h3>Tarçın & Portakal</h3>
+                <p>180 ₺</p>
+                <button class="btn-detail" data-title="Tarçın & Portakal" data-price="180 ₺"
+                    data-img="assets/images/mum3.jpg"
+                    data-desc="Kış aylarının vazgeçilmezi portakal ve tarçın karışımı.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="berry kırmızı meyveler çilek mum candle ahududu frambuaz yaban mersini böğürtlen tatlı meyve strawberry blueberry raspberry red fruits blackberry sweet fruits">
+                <img src="assets/images/mum6.jpg" alt="The Dance Of Berries">
+                <h3>The Dance Of Berries</h3>
+                <p>250 ₺</p>
+                <button class="btn-detail" data-title="The Dance Of Berries" data-price="250 ₺"
+                    data-img="assets/images/mum6.jpg"
+                    data-desc="Orman meyvelerinin tatlı ve ekşi dansı. Ahududu, böğürtlen ve yaban mersini notalarıyla dolu premium seri.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="kabak balkabağı baharat kış mum candle tarçın halloween turuncu sonbahar pumpkin spice spicy winter cinnamon orange autumn fall ">
+                <img src="assets/images/mum7.jpg" alt="Pumpkin Spice">
+                <h3>Pumpkin Spice</h3>
+                <p>250 ₺</p>
+                <button class="btn-detail" data-title="Pumpkin Spice" data-price="250 ₺"
+                    data-img="assets/images/mum7.jpg"
+                    data-desc="Balkabağı ve baharatların eşsiz uyumu. Sonbahar akşamları için ideal.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="kahve espresso çekirdek kahverengi mum candle latte americano coffee coffee  ">
+                <img src="assets/images/mum4.jpg" alt="Kahve Mum">
+                <h3>Espresso Dark</h3>
+                <p>210 ₺</p>
+                <button class="btn-detail" data-title="Espresso Dark" data-price="210 ₺"
+                    data-img="assets/images/mum4.jpg" data-desc="Taze çekilmiş kahve çekirdeklerinin yoğun kokusu.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="zencefil karanfil muskat yılbaşı mum candle yeniyıl kış kurabiye ginger cookie carnation new year nutmeg winter">
+                <img src="assets/images/mum8.jpg" alt="Gingerbread Mum">
+                <h3>Gingerbread</h3>
+                <p>270 ₺</p>
+                <button class="btn-detail" data-title="Gingerbread" data-price="270 ₺"
+                    data-img="assets/images/mum8.jpg"
+                    data-desc="Zencefil, tarçın ve yeni pişmiş kurabiyelerin sıcak, nostaljik kokusu.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="ilkbahar sarı beyaz çiçek taze ferah yatıştırıcı mum candle rahatlatıcı summer yellow white fresh flower">
+                <img src="assets/images/mum9.jpg" alt="Golden Daisy Mum">
+                <h3>Golden Daisy</h3>
+                <p>200 ₺</p>
+                <button class="btn-detail" data-title="Golden Daisy" data-price="200 ₺"
+                    data-img="assets/images/mum9.jpg"
+                    data-desc="Güneşli bahar günlerini anımsatan taze papatya ve kır çiçekleri esintisi.">
+                    İncele
+                </button>
+            </div>
+
+            <div class="product"
+                data-keywords="sarı taze ferah ferahlatıcı narenciye yaz mum candle yellow fresh summer citrus ">
+                <img src="assets/images/mum11.jpg" alt="Limon Ferahlığı Mum">
+                <h3>Limon Ferahlığı</h3>
+                <p>210 ₺</p>
+                <button class="btn-detail" data-title="Limon Ferahlığı" data-price="210 ₺"
+                    data-img="assets/images/mum11.jpg"
+                    data-desc="Akdeniz limon bahçelerinden gelen taze ve canlandırıcı narenciye kokusu. Enerji verir.">
+                    İncele
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('productModal')">&times;</span>
+            
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Ürün Resmi">
+                
+                <div class="modal-info">
+                    <h2 id="modalTitle">Ürün Adı</h2>
+                    <p id="modalDesc">Açıklama</p>
+                    <p id="modalPrice" class="price">00 ₺</p>
+
+                    <button class="btn-add-cart" onclick="addToCart()">
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCart()">&times;</span>
+            <h2 style="margin-bottom: 20px; color:#4A3B32;">Sepetim</h2>
+
+            <div id="cartItemsContainer">
+                <p style="text-align:center;color:#777;">Sepetiniz boş.</p>
+            </div>
+
+            <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                <div style="display:flex; justify-content:space-between; align-items: center; font-size: 1.2rem; font-weight: bold; color: #4A3B32;">
+                    <span>Toplam:</span>
+                    <span id="cartTotal">0 ₺</span>
+                </div>
+
+                <button class="btn-checkout" onclick="goToCheckout()">
+                    Sepeti Onayla
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 MumDükkanı – Tüm Hakları Saklıdır</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
